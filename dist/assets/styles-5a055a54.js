@@ -132,13 +132,14 @@ margin-bottom: 10rem;
 display: flex;
 flex-direction: row;
 font-size: 16px;
-padding: 30px;
+padding: 30px 0;
+width: 100%;
 justify-content: flex-start;
 align-items: center;
 gap: 25px;
 border-bottom: 10px solid #3498DB;
 @media (max-width: 528px) {
-	padding: 1px;
+	padding: 1px 0;
 	font-size: 10px;
 	justify-content: space-between;
 	gap: 5px;
@@ -255,9 +256,9 @@ text-transform: uppercase;
 `,Jn=l.li`
 cursor: pointer;
 `,Zn=l.div`
-width: 100vw;
+width: 100%;
 `,Qn=l.img`
-width: 100vw;
+width: 100%;
 height: 64vh;
 @media (max-width: 528px) {
 	height: 25vh;
@@ -267,11 +268,11 @@ height: 64vh;
 display: flex;
 flex-direction: row;
 justify-content: center;
-width: 100vw;
+width: 100%;
 `,to=l.div`
 display: flex;
 justify-content: center;
-width: 50vw;
+width: 50%;
 margin: 30px 30px 70px 30px;
 @media (max-width: 528px) {
 	margin: 30px 30px 110px 30px;
@@ -295,7 +296,8 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-padding: 10px;
+padding: 10px 0;
+width: 100%;
 background: #154360;
 `,oo=l.img`
 width: 70px;
