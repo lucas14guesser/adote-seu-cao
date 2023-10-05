@@ -29,7 +29,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
     font-family: 'Martian Mono', monospace;
 }
 ol, ul {
@@ -46,42 +45,6 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-.input-adotar {
-width: 100%;
-padding: 10px;
-border: 1px solid #FFF;
-background: #FFF;
-border-radius: 5px;
-outline: none;
-color: #154360;
-font-size: 1rem;
-font-family: 'Martian Mono', monospace;
-transition: 0.5s;
-	&:valid ~ span, &:focus ~ span {
-		color: #3498DB;
-		transform: translateX(10px) translateY(-7px);
-		font-size: 1rem;
-		padding: 0 10px;
-		border-left: 1px solid #3498DB;
-		border-right: 1px solid #3498DB;
-		letter-spacing: 0.2rem;
-		background: #3498DB;
-		color: #FFF;
-		border-radius: 2px;
-	}
-	&:valid, &:focus {
-		border: 1px solid #3498DB;
-	}
-	&::placeholder {
-		color: transparent;
-	}
-
-	@media (max-width: 528px) {
-		&::placeholder {
-		  color: #000;
-		}
-	  }
 }
 `
 export const Titulo = styled.h1`
@@ -108,7 +71,7 @@ color: #3498DB;
 `
 export const Container = styled.div`
 display: flex;
-width: 100vw;
+width: 100%;
 flex-direction: column;
 justify-content: center;
 align-items: center;
@@ -347,15 +310,18 @@ font-size: 20px;
 }
 `
 export const ItensSobre = styled.li`
-	background-image: url("../../src/assets/bulldog.png");
-	background-size: 1.4rem;
-	background-repeat: no-repeat;
+	display: flex;
 	padding-left: 2.5rem;
+	align-items: center;
 	margin-bottom: 1rem;
 	@media (max-width: 528px) {
-		background-size: 1.2rem;
 		padding-left: 2rem;
 	}
+`
+export const ListaImagem = styled.img`
+width: 30px;
+height: 30px;
+margin-right: 1rem;
 `
 
 // Estilos da página Adotar
@@ -382,6 +348,41 @@ width: 250px;
 @media (max-width: 528px) {
 	width: 200px;
 }
+.input-adotar {
+	padding: 10px;
+	border: 1px solid #FFF;
+	background: #FFF;
+	border-radius: 5px;
+	outline: none;
+	color: #154360;
+	font-size: 1rem;
+	font-family: 'Martian Mono', monospace;
+	transition: 0.5s;
+		&:valid ~ span, &:focus ~ span {
+			color: #3498DB;
+			transform: translateX(10px) translateY(-7px);
+			font-size: 1rem;
+			padding: 0 10px;
+			border-left: 1px solid #3498DB;
+			border-right: 1px solid #3498DB;
+			letter-spacing: 0.2rem;
+			background: #3498DB;
+			color: #FFF;
+			border-radius: 2px;
+		}
+		&:valid, &:focus {
+			border: 1px solid #3498DB;
+		}
+		&::placeholder {
+			color: transparent;
+		}
+	
+		@media (max-width: 528px) {
+			&::placeholder {
+			  color: #000;
+			}
+		  }
+	}
 `
 export const LabelInput = styled.span`
 position: absolute;
@@ -398,7 +399,7 @@ transition: 0.5s;
 `
 export const BotaoEnviar = styled.button`
 padding: 10px;
-width: 272px;
+width: 246px;
 border-radius: 5px;
 border: 1px solid #154360;
 background: #3498DB;

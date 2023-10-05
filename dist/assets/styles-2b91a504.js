@@ -45,7 +45,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
     font-family: 'Martian Mono', monospace;
 }
 ol, ul {
@@ -62,42 +61,6 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-.input-adotar {
-width: 100%;
-padding: 10px;
-border: 1px solid #FFF;
-background: #FFF;
-border-radius: 5px;
-outline: none;
-color: #154360;
-font-size: 1rem;
-font-family: 'Martian Mono', monospace;
-transition: 0.5s;
-	&:valid ~ span, &:focus ~ span {
-		color: #3498DB;
-		transform: translateX(10px) translateY(-7px);
-		font-size: 1rem;
-		padding: 0 10px;
-		border-left: 1px solid #3498DB;
-		border-right: 1px solid #3498DB;
-		letter-spacing: 0.2rem;
-		background: #3498DB;
-		color: #FFF;
-		border-radius: 2px;
-	}
-	&:valid, &:focus {
-		border: 1px solid #3498DB;
-	}
-	&::placeholder {
-		color: transparent;
-	}
-
-	@media (max-width: 528px) {
-		&::placeholder {
-		  color: #000;
-		}
-	  }
 }
 `,Fn=l.h1`
 font-size: 32px;
@@ -121,7 +84,7 @@ color: #3498DB;
 }
 `,Ln=l.div`
 display: flex;
-width: 100vw;
+width: 100%;
 flex-direction: column;
 justify-content: center;
 align-items: center;
@@ -329,16 +292,18 @@ font-size: 20px;
 	font-size: 12px;
 }
 `,co=l.li`
-	background-image: url("../../src/assets/bulldog.png");
-	background-size: 1.4rem;
-	background-repeat: no-repeat;
+	display: flex;
 	padding-left: 2.5rem;
+	align-items: center;
 	margin-bottom: 1rem;
 	@media (max-width: 528px) {
-		background-size: 1.2rem;
 		padding-left: 2rem;
 	}
-`,uo=l.div`
+`,uo=l.img`
+width: 30px;
+height: 30px;
+margin-right: 1rem;
+`,po=l.div`
 display: flex;
 justify-content: center;
 align-items: center;
@@ -354,13 +319,48 @@ padding: 1.2rem;
 	padding: 1.2rem 0;
 
 }
-`,po=l.div`
+`,lo=l.div`
 position: relative;
 width: 250px;
 @media (max-width: 528px) {
 	width: 200px;
 }
-`,lo=l.span`
+.input-adotar {
+	padding: 10px;
+	border: 1px solid #FFF;
+	background: #FFF;
+	border-radius: 5px;
+	outline: none;
+	color: #154360;
+	font-size: 1rem;
+	font-family: 'Martian Mono', monospace;
+	transition: 0.5s;
+		&:valid ~ span, &:focus ~ span {
+			color: #3498DB;
+			transform: translateX(10px) translateY(-7px);
+			font-size: 1rem;
+			padding: 0 10px;
+			border-left: 1px solid #3498DB;
+			border-right: 1px solid #3498DB;
+			letter-spacing: 0.2rem;
+			background: #3498DB;
+			color: #FFF;
+			border-radius: 2px;
+		}
+		&:valid, &:focus {
+			border: 1px solid #3498DB;
+		}
+		&::placeholder {
+			color: transparent;
+		}
+	
+		@media (max-width: 528px) {
+			&::placeholder {
+			  color: #000;
+			}
+		  }
+	}
+`,fo=l.span`
 position: absolute;
 left: 0;
 padding: 12px;
@@ -372,9 +372,9 @@ transition: 0.5s;
 @media (max-width: 528px) {
 	display: none;
 }
-`,fo=l.button`
+`,ho=l.button`
 padding: 10px;
-width: 272px;
+width: 246px;
 border-radius: 5px;
 border: 1px solid #154360;
 background: #3498DB;
@@ -389,13 +389,13 @@ transition: 0.3s;
 	&:hover {
 		border-color: #FFF;
 	}
-`,ho=l.div`
+`,mo=l.div`
 display: flex;
 justify-content: center;
 text-align: center;
 flex-direction: column;
 width: 50%;
-`,mo=l.div`
+`,go=l.div`
 display: flex;
 flex-direction: column;
 gap: 20px;
@@ -404,7 +404,7 @@ margin-bottom: 2rem;
 	gap: 10px;
 	margin-bottom: 1rem;
 }
-`,go=l.div`
+`,yo=l.div`
 display: flex;
 flex-direction: column;
 gap: 5px;
@@ -412,12 +412,12 @@ margin-bottom: 2rem;
 @media (max-width: 528px) {
 	margin-bottom: 1rem;
 }
-`,yo=l.div`
+`,xo=l.div`
 border: 10px solid #3498DB;
-`,xo=l.img`
+`,vo=l.img`
 width: 100%;
 height: 100%;
-`,vo=l.img`
+`,bo=l.img`
 margin: top: 2rem;
 width: 100px;
-`;export{ao as A,Qn as B,Gn as C,ho as D,ro as E,mo as F,go as G,yo as H,qn as I,xo as J,Un as L,Kn as M,Mn as N,Tn as R,Nn as S,Fn as T,z as a,Hn as b,Yn as c,Vn as d,Xn as e,Jn as f,Bn as g,Wn as h,eo as i,jn as j,to as k,Zn as l,oo as m,io as n,no as o,zn as p,ur as q,ue as r,po as s,lo as t,fo as u,vo as v,uo as w,so as x,co as y,Ln as z};
+`;export{Ln as A,Qn as B,Gn as C,ao as D,ro as E,mo as F,go as G,yo as H,qn as I,xo as J,vo as K,Un as L,Kn as M,Mn as N,Tn as R,Nn as S,Fn as T,z as a,Hn as b,Yn as c,Vn as d,Xn as e,Jn as f,Bn as g,Wn as h,eo as i,jn as j,to as k,Zn as l,oo as m,io as n,no as o,zn as p,ur as q,ue as r,lo as s,fo as t,ho as u,bo as v,po as w,so as x,co as y,uo as z};
